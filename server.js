@@ -3,9 +3,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const port = 3005
 
-const data = [
-    
-]
+const fs = require("fs")
+const todos = './Json/data.json'
+const data = JSON.parse(fs.readFileSync(todos, "utf-8"));
 
 const app = express()
 
@@ -31,6 +31,7 @@ app.post('/add', (req, res) => {
     // res.render('add')
     data.push({string: req.body.string, integer: Number(req.body.integer), float: parseFloat(req.body.float), date: req.body.date, boolean: JSON.parse(req.body.boolean) },
     );
+    fs.writeFileSync(todos, JSON.stringify(data, null, 3))
     res.redirect('/')
 })
 
@@ -48,6 +49,7 @@ app.get('/edit/:id', (req, res) => {
 app.post('/edit/:id', (req, res) => {
     const index = req.params.id
     data[index] = {string: req.body.string, integer: Number(req.body.integer), float: parseFloat(req.body.float), date: req.body.date, boolean: JSON.parse(req.body.boolean) }
+    fs.writeFileSync(todos, JSON.stringify(data, null, 3))
     res.redirect('/')
 })
 

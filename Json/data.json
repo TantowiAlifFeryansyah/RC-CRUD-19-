@@ -1,0 +1,23 @@
+[
+   {
+      "string": "Tantowi",
+      "integer": 15,
+      "float": 1.5,
+      "date": "",
+      "boolean": true
+   },
+   {
+      "string": "Yaqin",
+      "integer": 25,
+      "float": 2.5,
+      "date": "25 September 1997",
+      "boolean": true
+   },
+   {
+      "string": "fajar",
+      "integer": 18,
+      "float": 1.8,
+      "date": "2004-07-11",
+      "boolean": true
+   }
+]
