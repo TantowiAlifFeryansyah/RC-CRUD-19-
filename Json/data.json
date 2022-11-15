@@ -3,15 +3,15 @@
       "string": "Tantowi",
       "integer": 15,
       "float": 1.5,
-      "date": "",
-      "boolean": true
+      "date": "1997-09-15",
+      "boolean": false
    },
    {
       "string": "Yaqin",
       "integer": 25,
       "float": 2.5,
-      "date": "25 September 1997",
-      "boolean": true
+      "date": "1997-09-25",
+      "boolean": false
    },
    {
       "string": "fajar",
